@@ -40,50 +40,37 @@ class LifecycleTextView : AppCompatTextView, LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun create() {
-        if (enable) {
-            buf?.append(System.currentTimeMillis().toString(), "-creat", "\n")
-            this.text = buf
-        }
+        text("create")
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     fun start() {
-        if (enable) {
-            buf?.append(System.currentTimeMillis().toString(), "-start", "\n")
-            this.text = buf
-        }
+        text("start")
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     fun resume() {
-        if (enable) {
-            buf?.append(System.currentTimeMillis().toString(), "-resume", "\n")
-            this.text = buf
-        }
+        text("resume")
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
     fun pause() {
-        if (enable) {
-            buf?.append(System.currentTimeMillis().toString(), "-pause", "\n")
-            this.text = buf
-        }
+        text("pause")
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
     fun stop() {
-        if (enable) {
-            buf?.append(System.currentTimeMillis().toString(), "-stop", "\n")
-            this.text = buf
-        }
+        text("stop")
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     fun destroy() {
-        if (enable) {
-            buf?.append(System.currentTimeMillis().toString(), "-destroy", "\n")
-            this.text = buf
-        }
+        text("destroy")
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_ANY)
+    fun any() {
+        text("any")
     }
 
     fun setLifecycleEanable(boolean: Boolean) {
@@ -91,6 +78,13 @@ class LifecycleTextView : AppCompatTextView, LifecycleObserver {
         if (mlifecycle != null) {
             if (mlifecycle?.currentState?.isAtLeast(STARTED)!!) {
             }
+        }
+    }
+
+    open fun text(msg: String) {
+        if (enable) {
+            buf?.append(System.currentTimeMillis().toString(), "-", msg, "\n")
+            this.text = buf
         }
     }
 }
