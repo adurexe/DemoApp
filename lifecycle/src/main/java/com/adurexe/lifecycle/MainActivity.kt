@@ -30,4 +30,9 @@ class MainActivity : BaseActivity() {
         super.onDestroy()
         lifecycle_tv.text("onDestroy")
     }
+
+    override fun onStop() {
+        super.onStop()
+        lifecycle_tv.text("onStop")
+    }
 }
