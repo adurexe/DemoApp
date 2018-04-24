@@ -1,1 +1,1 @@
-include ':app',':lifecycle', ':livedata'
+include ':app',':lifecycle', ':livedata', ':wechatpay'
