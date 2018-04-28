@@ -4,8 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DemoApp.iml" filepath="$PROJECT_DIR$/DemoApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ipc/ipc.iml" filepath="$PROJECT_DIR$/ipc/ipc.iml" />
       <module fileurl="file://$PROJECT_DIR$/lifecycle/lifecycle.iml" filepath="$PROJECT_DIR$/lifecycle/lifecycle.iml" />
       <module fileurl="file://$PROJECT_DIR$/livedata/livedata.iml" filepath="$PROJECT_DIR$/livedata/livedata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rxjava/rxjava.iml" filepath="$PROJECT_DIR$/rxjava/rxjava.iml" />
       <module fileurl="file://$PROJECT_DIR$/wechatpay/wechatpay.iml" filepath="$PROJECT_DIR$/wechatpay/wechatpay.iml" />
     </modules>
   </component>

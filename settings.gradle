@@ -1,1 +1,1 @@
-include ':app',':lifecycle', ':livedata', ':wechatpay'
+include ':app',':lifecycle', ':livedata', ':wechatpay', ':rxjava', ':ipc', ':ipc'
